@@ -43,8 +43,8 @@ class _HomePageState extends State<HomePage> {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 4,
-                crossAxisSpacing: 10,
-                childAspectRatio: 0.8,
+                crossAxisSpacing: 8,
+                childAspectRatio: 3/2,
               ),
               children: [
                 Align(
@@ -66,7 +66,6 @@ class _HomePageState extends State<HomePage> {
                 Align(
                   child: Container(
                     alignment: Alignment.center,
-
                     width: 150,
                     height: 60,
                     color: Colors.white,
@@ -80,54 +79,60 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Align(
-                  alignment: Alignment.bottomCenter,
                   child: Container(
-                    margin: EdgeInsets.only(bottom: 45),
+                    padding: EdgeInsets.only(left: 6),
+                    alignment: Alignment.center,
+                    width: 150,
+                    height: 60,
                     color: Colors.white,
                     child: Text(
                       'COLETÂNEA DE DADOS',
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: Alignment.bottomCenter,
                   child: Container(
-                    margin: EdgeInsets.only(bottom: 45),
+                    alignment: Alignment.center,
+                    width: 150,
+                    height: 60,
                     color: Colors.white,
                     child: Text(
                       'SOBRE NÓS',
                       style: TextStyle(
-                        fontSize: 28,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                 ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Container(
-                    margin: EdgeInsets.only(bottom: 35),
-                    color: Colors.white,
-                    child: Text(
-                      'Últimas notícias:',
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-
-              ],
+              ]
             ),
-          ],
-        ),
-
-      ),
+            Divider(),
+            Align(
+              child: Container(
+                padding: EdgeInsets.all(6),
+                alignment: Alignment.topLeft,
+                width: 350,
+                height: 220,
+                color: Colors.white,
+                child: Text(
+                  'ÚLTIMAS NOTÍCIAS:',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ]
+    ),
+    ),
     );
   }
 }
+
+
